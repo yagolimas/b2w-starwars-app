@@ -1,6 +1,4 @@
-# B2W front-end developer challenge.
-
-## Star Wars Challenge
+# Star Wars Challenge
 
 A React app that consumes Star Wars planet's data from [SWAPI](https://swapi.co/).
 
