@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import api from '../../services/api';
+import { getPlanetById } from '../../services/api';
 import './styles.css';
 
 import Loader from '../Loader'
 
-export default class Planets extends Component {
+export default class Planet extends Component {
 
     state = {
         planets: [],
@@ -20,7 +20,7 @@ export default class Planets extends Component {
 
         this.setLoading(true);
 
-        const response = await api.get(`planets/${ randomPlanetId }`)
+        const response = await getPlanetById(randomPlanetId)
             .then(this.setLoading(false));
 
         this.setState({ planets: response.data, isLoaded: !!response });
@@ -28,7 +28,7 @@ export default class Planets extends Component {
 
     setLoading = isLoaded => this.setState({ isLoaded: isLoaded });
 
-    getRandomPlanetId = () => Math.floor((Math.random() * (60 - 1)) + 1);
+    getRandomPlanetId = () => Math.floor(Math.random() * 61 + 1);
 
     render() {
         let { isLoaded } = this.state;

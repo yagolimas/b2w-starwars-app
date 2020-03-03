@@ -1,12 +1,12 @@
 import React from 'react';
 import './styles.css';
 
-import Planets from './components/Planets';
+import Planet from './components/Planet';
 
 function App() {
   return (
     <div className="App">
-      <Planets/>
+      <Planet/>
     </div>
   );
 }
