@@ -1,0 +1,55 @@
+.card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.title {
+    background-color: #c3a839;
+    color: #131a24;
+    padding: 0.875rem;
+    text-transform: uppercase;
+    padding: 0.875rem;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+.content {
+    border: 1px solid #c3a839;
+    background: transparent;
+    display: grid;
+    padding: 1.25rem;
+    width: 25.375rem;
+}
+.category {
+    text-align: left;
+    margin-bottom: 0.4375rem;
+    text-transform: capitalize;
+}
+.label {
+    color: #e2bc4a;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.category-films {
+    margin-top: 0.857rem;
+    color: #feda4a;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.btn-next .button{
+    padding: 0.7rem 0rem;
+    width: 28rem;
+    border: 1px solid #cb3827;
+    color: white;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Lato';
+    margin-top: 20px;
+}
