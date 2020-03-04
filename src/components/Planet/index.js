@@ -23,34 +23,34 @@ export default class Planet extends Component {
         const response = await getPlanetById(randomPlanetId)
             .then(this.setLoading(false));
 
-        this.setState({ planets: response.data, isLoaded: !!response });
+        this.setState({ planets: response.data, isLoaded: true });
     }
 
-    setLoading = isLoaded => this.setState({ isLoaded: isLoaded });
+    setLoading = isLoaded => this.setState({ isLoaded });
 
     getRandomPlanetId = () => Math.floor(Math.random() * 61 + 1);
 
     render() {
-        let { isLoaded } = this.state;
+        const { isLoaded, planets } = this.state;
         
         return (
             !isLoaded ? <Loader/> :
                 
                 <section className="card">
-                    <h3 className="title">{ this.state.planets.name }</h3>
+                    <h3 className="title">{ planets.name }</h3>
                 
                     <div className="content">
                         <p className="category">
-                            <span className="label">Population:&nbsp;</span> { this.state.planets.population }
+                            <span className="label">Population:&nbsp;</span> { planets.population }
                         </p>
                         <p className="category">
-                            <span className="label">Climate:&nbsp;</span> { this.state.planets.climate }
+                            <span className="label">Climate:&nbsp;</span> { planets.climate }
                         </p>
                         <p className="category">
-                            <span className="label">Terrain:&nbsp;</span> { this.state.planets.terrain }
+                            <span className="label">Terrain:&nbsp;</span> { planets.terrain }
                         </p>
                         <p className="category-films">
-                            <span>Featured in { this.state.planets.films?.length } film(s).</span>
+                            <span>Featured in { planets.films?.length } film(s).</span>
                         </p>
                     </div>
                     <div className="btn-next">
